@@ -1,0 +1,103 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+/* #Welcompage::-webkit-scrollbar{
+    display: none;
+} */
+#Welcompage{
+    width: 75%;
+    background-color:white;;
+    height: 100%;
+    position: fixed;
+    right: 0px;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+}
+
+#underwelcom{
+    width: 80% ;
+    height: 85%;
+    background-color: #fff;
+    overflow: scroll;
+    margin-top: 20px;
+    padding-top: 40px;
+ 
+}
+#underwelcom::-webkit-scrollbar{
+    display: none;
+}
+
+#h2forwelcome{
+    width: 100%;
+    height: 40px;
+    font-size: 2rem;
+    font-style:normal;
+    margin-top: 60px;
+    font-weight: 100;   
+    
+    color: black;
+}
+
+#h2forwelcometyped{
+    color: green;
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 60px;
+    height: 60px;
+    width: 100%;
+}
+
+#paratext{
+    font-size: 0.9rem;
+    text-align: left;
+    padding: 20px;
+}
+
+#h2forbeni{
+    width: 100%;
+    height: 40px;
+    font-size: 1.4rem;
+    background-color: rgb(34 197 94);
+    margin-bottom: 60px;
+    margin-top: 60px;
+    font-weight: 900;
+    padding-left: 20px;
+    
+    color: white;
+}
+
+.pforbeni{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid  rgb(34 197 94) ;
+    margin-bottom: 10px;
+    
+}
+
+.numbericon{
+    width: 10%;
+    height: 100%;
+    background-color:rgb(34 197 94) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.pforunderbeini{
+    height: 100%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 5px;
+    text-align: left;
+}
+
+

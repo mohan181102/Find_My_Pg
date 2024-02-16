@@ -1,0 +1,11 @@
+.detailsul{
+    background-color: rgb(250, 249, 246);
+    margin-bottom: 60px;
+    margin-top: 30px;
+}
+
+.imgforbook{
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}

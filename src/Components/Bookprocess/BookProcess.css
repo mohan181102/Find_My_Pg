@@ -1,0 +1,25 @@
+.li{
+    border-radius: 50%;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: medium;
+}
+
+.activ{
+    background-color: green;
+}
+ 
+.complete{
+    background-color: white;
+    border: 2px solid green;
+    transition: all 50ms;
+    color: green;
+}
+
+.pregress{
+    height: 100%;
+    background-color: rgb(34 197 94);
+    transition: all 50ms ease-in;
+}

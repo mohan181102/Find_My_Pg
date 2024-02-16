@@ -1,0 +1,11 @@
+.hovereffect::after{
+    content: "jsjdjd";
+    position: absolute;
+    width: 25%;
+    height: 208px;
+    display: none;
+}
+
+.hovereffect::after:hover{
+    display: block;
+}
