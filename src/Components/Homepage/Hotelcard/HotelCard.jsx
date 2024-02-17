@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import "./HotelCard.css";
 
 function HotelCard({ image, hotelname, price, rating, location }) {
+  const [body, setbody] = useState(true);
   return (
     <div
+      onMouseDown={() => setbody((prev) => !prev)}
       className={`body w-full h-full border rounded-md flex items-center justify-center flex-col`}
     >
       <img

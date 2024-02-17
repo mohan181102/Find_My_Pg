@@ -1,3 +1,4 @@
+import axios from "axios";
 import React from "react";
 
 const page1 = () => {
@@ -26,9 +27,9 @@ const page1 = () => {
 };
 const payment = () => {
   return (
-    <div className={`w-full h-3/4  border border-spacing-1 border-black `}>
-      sd
-    </div>
+    <div
+      className={`w-full h-3/4  border border-spacing-1 border-black `}
+    ></div>
   );
 };
 const done = () => {

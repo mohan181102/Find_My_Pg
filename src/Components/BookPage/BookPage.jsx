@@ -17,23 +17,42 @@ function BookPage({ image, hotelname, price, rating, location }) {
       className={`w-3/4 h-full pb-20 fixed  overflow-scroll right-0 flex flex-wrap items-center justify-center bg-white flex-row `}
     >
       <img
-        className={`imgforbook w-full h-3/4`}
+        className={`imgforbook w-full h-3/4 mb-3`}
         src={`https://images.unsplash.com/photo-1682688759157-57988e10ffa8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MzU4MDd8MXwxfGFsbHwxfHx8fHx8Mnx8MTcwNzM2NTg3N3w&ixlib=rb-4.0.3&q=80&w=400`}
       />
-
       <div
-        className={`w-3/4 h-36 my-3 p-2  flex-row flex items-center overflow-y-hidden overflow-x-scroll  bg-green-500`}
+        className={`w-3/4 h-auto my-3 rounded-md p-2 pl-2 overflow-scroll flex items-center  justify-start flex-wrap    bg-green-500`}
       >
-        {imagearray.map((item, index) => {
-          return (
-            <li
-              key={index}
-              className={`w-44 mx-2 inline-block h-3/4 overflow-scroll  rounded-md bg-white `}
-            >
-              {item}
-            </li>
-          );
-        })}
+        <h2
+          className={`w-3/4 font-bold text-lg h-10 overflow-hidden  bg-green-500 text-white  pl-9 flex justify-start items-center `}
+        >
+          Images
+        </h2>
+        <div className={`w-full h-1/4 flex overflow-scroll overflow-y-hidden `}>
+          {imagearray.map((item, index) => {
+            return (
+              <>
+                <div
+                  alt="not found"
+                  style={{
+                    backgroundSize: "cover",
+                    backgroundImage: `url(
+                      "https://images.unsplash.com/photo-1682688759157-57988e10ffa8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MzU4MDd8MXwxfGFsbHwxfHx8fHx8Mnx8MTcwNzM2NTg3N3w&ixlib=rb-4.0.3&q=80&w=400"
+                    )`,
+                  }}
+                  key={index * 3}
+                  className={`imghotel  w-1/4 mx-2 h-1/4  rounded-md bg-white `}
+                >
+                  <div
+                    className={`imgforpg  flex items-center text-white justify-center bg-black`}
+                  >
+                    {"Bedroom"}
+                  </div>
+                </div>
+              </>
+            );
+          })}
+        </div>
       </div>
 
       <ul

@@ -9,3 +9,33 @@
     background-position: center;
     object-fit: cover;
 }
+
+.imgforpg{
+    width: 160px;
+    color: white;
+    border-radius: 0.3rem;
+    height: 0px;
+    z-index: -20;
+    background-color: rgba( 37,37,37,0.7);
+}
+ 
+.imghotel{
+    width: 160px;
+    height: 90px;
+    display: flex;
+    align-items: flex-end ;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+.imghotel:hover .imgforpg{
+    transition: all 200ms ease-in;
+    height: 90px;
+    z-index: 10;
+}
+
+
+ 
+
+ 

@@ -1,7 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Profile.css";
 
 function Profile() {
+  const [email, setemail] = useState("sda");
+
+  async function check() {
+    console.log("reache");
+    const res = await fetch("http://localhost:8006/register/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: "asass",
+      }),
+    });
+
+    console.log(res);
+  }
+
+  // check();
   return (
     <div className="profile">
       <div className="underprofile">
