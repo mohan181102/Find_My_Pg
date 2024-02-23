@@ -1,10 +1,16 @@
 import React, { useState } from "react";
 import "./HotelCard.css";
+import { motion } from "framer-motion";
+import { useSelector } from "react-redux";
 
 function HotelCard({ image, hotelname, price, rating, location }) {
   const [body, setbody] = useState(true);
+  const color = useSelector((state) => state.colors.userdata);
   return (
-    <div
+    <motion.div
+      initial={{ scale: "0" }}
+      animate={{ scale: "1" }}
+      exit={{ scale: "0" }}
       onMouseDown={() => setbody((prev) => !prev)}
       className={`body w-full h-full border rounded-md flex items-center justify-center flex-col`}
     >
@@ -13,7 +19,7 @@ function HotelCard({ image, hotelname, price, rating, location }) {
         className={`img w-full h-3/4 border border-spacing-1 rounded-t-md `}
       />
       <div
-        className={`data w-full h-1/4 bg-green-500 flex rounded-b-md items-center justify-center flex-row flex-wrap`}
+        className={`data w-full h-1/4 ${color.sidemainTailwind} flex rounded-b-md items-center justify-center flex-row flex-wrap`}
       >
         <h2
           className={` h-2/4 w-full text-lg text-white flex justify-between items-center flex-row pl-2`}
@@ -22,8 +28,8 @@ function HotelCard({ image, hotelname, price, rating, location }) {
           <p
             className={`span w-auto h-auto text-md flex justify-center mr-2 px-2 items-center `}
           >
-            <span className={`font-bold w-full h-auto`}>
-              4.6 <i className="fa-solid fa-star fa-sm"></i>
+            <span className={`font-bold w-full h-auto ${color.TextTailwind}`}>
+              4.6 <i className="fa-solid fa-star fa-sm "></i>
             </span>
           </p>
         </h2>
@@ -43,7 +49,7 @@ function HotelCard({ image, hotelname, price, rating, location }) {
           Durg CG
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

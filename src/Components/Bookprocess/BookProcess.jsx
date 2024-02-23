@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./BookProcess.css";
+import Payment from "../Payment/Children";
 
 function BookProcess({ ProcessNumber, children, Bgcolor, LineColor, ref }) {
-  const [array, setarray] = useState(children);
+  const [array, setarray] = useState([1, 2, 3]);
   const [currentStep, setcurrrentStep] = useState(1);
   const [isCompleted, setCompleted] = useState(false);
   const [componentNo, setcomponentNo] = useState(0);
@@ -31,9 +32,11 @@ function BookProcess({ ProcessNumber, children, Bgcolor, LineColor, ref }) {
 
   return (
     <div
-      className={`w-3/4 h-auto flex justify-center items-center flex-col gap-1`}
+      className={`w-3/4 h-full fixed top-0 right-0 flex  justify-center  items-center flex-col gap-1`}
     >
-      <ul className={`ul w-full h-full flex justify-between items-center  `}>
+      <ul
+        className={`ul w-3/4 mt-10 h-1/4 flex justify-between items-center  `}
+      >
         {array.map((item, index) => {
           return (
             <li
@@ -51,26 +54,15 @@ function BookProcess({ ProcessNumber, children, Bgcolor, LineColor, ref }) {
           <div style={{ width: `${progessBar()}%` }} className={`pregress`} />
         </div>
       </ul>
-      {componentNo < array.length ? (
-        <h2
-          className={`w-full h-10 text-xl font-semibold text-black flex items-center justify-center mt-3`}
-        >
-          {array[componentNo].name}
-        </h2>
-      ) : (
-        ""
-      )}
-      {componentNo < array.length ? (
-        <div className={`w-full h-full mt-16 mb-10`}>
-          {array[componentNo].component}
-        </div>
-      ) : (
-        ""
-      )}
+
+      <div className={`w-full h-full`}>
+        <Payment />
+      </div>
+
       {!isCompleted ? (
         <button
           onClick={(e) => data(e)}
-          className={`w-auto p-2 h-auto bg-slate-500 border-none text-white flex items-center justify-center`}
+          className={`w-24 p-2 mb-2 h-auto bg-slate-500 border-none rounded-md  text-white flex items-center justify-center`}
         >
           {currentStep == array.length ? "Finish" : "Next"}
         </button>

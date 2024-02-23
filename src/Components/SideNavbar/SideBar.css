@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #fff;
+    background-color: #EAEAEA;
     border: 1px solid transparent;
     border-radius: 0.3rem;
     margin-top: 20px;
@@ -33,7 +33,7 @@
     width: 80%;
     height: 40px;
     font-size: large;
-    color: green;
+    
     margin-bottom: 10px;
     display: flex;
     align-items: center;
@@ -42,6 +42,6 @@
     gap: 50px;
     cursor: pointer;
     box-shadow: inset 0 -3em 3em rgb(0 200 0 / 10%);
-    border: 2px solid green;
+    
     border-radius: 0.3rem;
 }

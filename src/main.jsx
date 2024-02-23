@@ -11,8 +11,13 @@ import Login from "./Components/Loginpage/Login.jsx";
 import Searchpg from "./Components/SearchPg/Searchpg.jsx";
 import BookPage from "./Components/BookPage/BookPage.jsx";
 import Payment from "./Components/Payment/Payment.jsx";
+import Rent from "./Components/Rent/Rent.jsx";
+import { Provider } from "react-redux";
+import store from "./Store/store.js";
+import Setting from "./Components/Setting/Setting.jsx";
+import Singup from "./Components/Singuppage/Singup.jsx";
 
-const loginstatus = true;
+const loginstatus = false;
 
 const route = createBrowserRouter([
   {
@@ -36,6 +41,14 @@ const route = createBrowserRouter([
         element: <Searchpg />,
       },
       {
+        path: "/rent",
+        element: <Rent />,
+      },
+      {
+        path: "/setting",
+        element: <Setting />,
+      },
+      {
         path: "/bookpage",
         element: <BookPage />,
       },
@@ -43,13 +56,19 @@ const route = createBrowserRouter([
         path: "/payment",
         element: <Payment />,
       },
+      {
+        path: "/singup",
+        element: <Singup />,
+      },
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={route} />
+    <Provider store={store}>
+      <RouterProvider router={route} />
+    </Provider>
     {/* <App /> */}
   </React.StrictMode>
 );

@@ -2,30 +2,9 @@
     padding: 0px;
     margin: 0px;
 }
-.profile{
-    width: 75%;
-    background-color:white;;
-    height: 100%;
-    position: fixed;
-    right: 0px;
-    padding: 20px;
-    display: flex;
-    align-items: top;
-    justify-content: center;
-}
+ 
 
-.underprofile{
-    width: 80% ;
-    height: 85%;
-    background-color: #fff;
-    overflow: scroll;
-    
-     display:  flex;
-     align-items: center;
-     justify-content: center;
-     flex-direction: column;
-     gap: 20px;
-}
+
 
 .underprofile::-webkit-scrollbar{
     display: none;
@@ -34,7 +13,7 @@
 .table{
     width: 100%;
     height: auto;
-    padding: 10px;
+     
     margin-top: 0px;
     position: relative;
     top: 100px;
@@ -42,7 +21,7 @@
     border-radius: 0.4rem;
     border-spacing: 10px;
     border-collapse: separate;
-    background-color: white;
+    background-color: #EAEAEA;
 }
 
 tr{
@@ -55,7 +34,7 @@ tr{
 }
 
 td{
-    border: 2px solid rgb(34 197 94);
+    border: 2px solid;
     text-align: left;
     padding: 10px;
 
@@ -66,4 +45,17 @@ th{
     color: white;
     background-color: rgb(34 197 94);
     width: 20%;
+}
+
+.profilename{
+    height: 0px;
+    display: none;
+    transition: all  ease-in;
+}
+
+.profil
+.profilimg:hover .profilename{
+    height: auto;
+    display: block;
+    
 }

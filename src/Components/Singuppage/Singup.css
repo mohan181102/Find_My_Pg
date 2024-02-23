@@ -1,0 +1,34 @@
+.loader{
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border: 2px none;
+    border-radius: 50%;
+    animation-name: load;
+    animation-iteration-count: infinite;
+    animation-delay: 50ms;
+    animation-duration: 1s;
+}
+
+@keyframes load {
+    0%{
+        border-left: 2px solid pink;
+        transform: rotate(0deg);
+    }
+    25%{
+        border-bottom: 2px solid pink;
+        transform: rotate(90deg);
+    }
+    50%{
+        border-right: 2px solid pink;
+        transform: rotate(180deg);
+    }
+    75%{
+        border-top: 2px solid pink;
+        transform: rotate(360deg);
+    }
+    100%{
+        border-left: 2px solid pink;
+        transform: rotate(0deg);
+    }
+}

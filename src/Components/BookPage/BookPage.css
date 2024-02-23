@@ -26,6 +26,7 @@
     align-items: flex-end ;
     justify-content: center;
     background-size: cover;
+    overflow-y: hidden;
     background-position: center;
     object-fit: cover;
 }
