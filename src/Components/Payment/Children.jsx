@@ -96,28 +96,4 @@ function Payment() {
   );
 }
 
-// // Done page
-// const done = () => {
-//   return (
-//     <div className={`w-full h-3/4  border border-spacing-1 border-black `}>
-//       sds
-//     </div>
-//   );
-// };
-
-// export const data = [
-//   {
-//     name: "PG details",
-//     component: "sdsd",
-//   },
-//   {
-//     name: "Payment way",
-//     component: payment(),
-//   },
-//   {
-//     name: "Finish",
-//     component: "sdasd",
-//   },
-// ];
-
 export default Payment;
